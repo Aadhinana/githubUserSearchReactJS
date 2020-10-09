@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 import Navbar from "./components/Navbar";
@@ -73,7 +73,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <BrowserRouter>
+        <HashRouter>
           <Navbar />
           <div className="container">
             {this.state.alert && <Alert alert={this.state.alert} />}
@@ -110,7 +110,7 @@ class App extends React.Component {
               />
             </Switch>
           </div>
-        </BrowserRouter>
+        </HashRouter>
       </React.Fragment>
     );
   }
